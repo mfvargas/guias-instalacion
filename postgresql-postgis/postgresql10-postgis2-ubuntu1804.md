@@ -31,3 +31,40 @@ $ sudo apt install -y postgresql postgresql-contrib postgis postgresql-10-postgi
 ```terminal
 $ systemctl status postgresql.service
 ```
+Salida
+```terminal
+● postgresql.service - PostgreSQL RDBMS
+   Loaded: loaded (/lib/systemd/system/postgresql.service; enabled; vendor preset: enabled)
+   Active: active (exited) since Sun 2019-11-03 03:14:32 UTC; 18min ago
+ Main PID: 5306 (code=exited, status=0/SUCCESS)
+    Tasks: 0 (limit: 4915)
+   CGroup: /system.slice/postgresql.service
+```
+
+```terminal
+$ systemctl status postgresql@10-main.service
+```
+Salida
+```terminal
+● postgresql@10-main.service - PostgreSQL Cluster 10-main
+   Loaded: loaded (/lib/systemd/system/postgresql@.service; indirect; vendor preset: enabled)
+   Active: active (running) since Sun 2019-11-03 03:14:37 UTC; 18min ago
+ Main PID: 6511 (postgres)
+    Tasks: 7 (limit: 4915)
+   CGroup: /system.slice/system-postgresql.slice/postgresql@10-main.service
+           ├─6511 /usr/lib/postgresql/10/bin/postgres -D /var/lib/postgresql/10/main -c config_file=/etc/postgresql/10/main/postgresql.conf
+           ├─6519 postgres: 10/main: checkpointer process
+           ├─6520 postgres: 10/main: writer process
+           ├─6521 postgres: 10/main: wal writer process
+           ├─6522 postgres: 10/main: autovacuum launcher process
+           ├─6523 postgres: 10/main: stats collector process
+           └─6526 postgres: 10/main: bgworker: logical replication launcher
+```
+
+```terminal
+$ systemctl is-enabled postgresql
+```
+Salida
+```terminal
+enabled
+```
