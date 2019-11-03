@@ -15,7 +15,9 @@ $ sudo apt-cache madison postgresql postgresql-contrib postgis postgresql-10-pos
 Salida
 ```terminal
 postgresql |     10+190 | http://mirrors.digitalocean.com/ubuntu bionic/main amd64 Packages
+postgresql-contrib |     10+190 | http://mirrors.digitalocean.com/ubuntu bionic/main amd64 Packages
    postgis | 2.4.3+dfsg-4 | http://mirrors.digitalocean.com/ubuntu bionic/universe amd64 Packages
+postgresql-10-postgis-scripts | 2.4.3+dfsg-4 | http://mirrors.digitalocean.com/ubuntu bionic/universe amd64 Packages
 ```
 
 ## Instalación
