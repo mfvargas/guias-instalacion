@@ -19,6 +19,6 @@ postgresql |     10+190 | http://mirrors.digitalocean.com/ubuntu bionic/main amd
 
 ## Instalación
 ```terminal
-$ sudo apt update
+$ sudo apt update -y
 $ sudo apt install -y postgresql postgresql-contrib postgis postgresql-10-postgis-2.5-scripts
 ```
