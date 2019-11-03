@@ -105,3 +105,15 @@ postgres=# CREATE EXTENSION postgis;
 postgres=# CREATE EXTENSION postgis_topology;
 postgres=# \q
 ```
+
+## Creación de una base de datos
+Ingreso a la interfaz de psql
+```terminal
+$ sudo -u postgres psql
+```
+
+Creación de un usuario con capacidad de crear bases de datos con las extensiones geoespaciales
+```terminal
+postgres=# CREATE DATABASE biocr20190916 TEMPLATE postgres OWNER gisadmin;
+postgres=# \q
+```
