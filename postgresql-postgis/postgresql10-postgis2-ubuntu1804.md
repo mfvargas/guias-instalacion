@@ -26,3 +26,8 @@ postgresql-10-postgis-scripts | 2.4.3+dfsg-4 | http://mirrors.digitalocean.com/u
 $ sudo apt update -y
 $ sudo apt install -y postgresql postgresql-contrib postgis postgresql-10-postgis-scripts
 ```
+
+## Revisión del servicio
+```terminal
+$ systemctl status postgresql.service
+```
