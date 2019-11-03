@@ -10,7 +10,7 @@ $ sudo reboot
 ## Revisión de las versiones disponibles
 Comando apt-cache madison
 ```terminal
-$ sudo apt-cache madison postgresql postgis
+$ sudo apt-cache madison postgresql postgresql-contrib postgis postgresql-10-postgis-scripts
 ```
 Salida
 ```terminal
@@ -21,5 +21,5 @@ postgresql |     10+190 | http://mirrors.digitalocean.com/ubuntu bionic/main amd
 ## Instalación
 ```terminal
 $ sudo apt update -y
-$ sudo apt install -y postgresql postgresql-contrib postgis postgresql-10-postgis-2.5-scripts
+$ sudo apt install -y postgresql postgresql-contrib postgis postgresql-10-postgis-scripts
 ```
