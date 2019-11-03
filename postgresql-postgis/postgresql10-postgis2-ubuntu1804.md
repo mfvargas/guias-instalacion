@@ -2,13 +2,10 @@
 **Última actualización**: 2 de noviembre de 2019
 
 ## Documentación
-Página oficial de PostgreSQL: [PostgreSQL: The World's Most Advanced Open Source Relational Database](https://www.postgresql.org/)
-
-Página oficial de PostGIS: [PostGIS - Spatial and Geographic objects for PostgreSQL](https://postgis.net/)
-
-Procedimientos para la instalación de PostgreSQL y PostGIS: [install_qgis_postgis_linux](https://github.com/qgises/install_qgis_postgis_linux/blob/master/Install_QGIS_POSTGIS.sh)
-
-Guía para la instalación de PostgreSQL 12 en Ubuntu 16.04/Ubuntu 18.04 [How To Install PostgreSQL 12 on Ubuntu 18.04 / Ubuntu 16.04](https://computingforgeeks.com/install-postgresql-12-on-ubuntu/)
+* Página oficial de PostgreSQL: [PostgreSQL: The World's Most Advanced Open Source Relational Database](https://www.postgresql.org/)
+* Página oficial de PostGIS: [PostGIS - Spatial and Geographic objects for PostgreSQL](https://postgis.net/)
+* Procedimientos para la instalación de PostgreSQL y PostGIS: [install_qgis_postgis_linux](https://github.com/qgises/install_qgis_postgis_linux/blob/master/Install_QGIS_POSTGIS.sh)
+* Guía para la instalación de PostgreSQL 12 en Ubuntu 16.04/Ubuntu 18.04 [How To Install PostgreSQL 12 on Ubuntu 18.04 / Ubuntu 16.04](https://computingforgeeks.com/install-postgresql-12-on-ubuntu/)
 
 ## Actualización del sistema
 ```terminal
