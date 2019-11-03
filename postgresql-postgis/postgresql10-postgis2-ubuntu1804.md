@@ -103,7 +103,7 @@ Ingreso a la interfaz de psql
 $ sudo -u postgres psql
 ```
 
-Creación de un usuario con capacidad de crear bases de datos con las extensiones geoespaciales
+Creación de un rol que incluye las extensiones postgis y postgis_topology
 ```terminal
 postgres=# CREATE ROLE gisadmin login PASSWORD 'postgres' SUPERUSER CREATEDB CREATEROLE NOINHERIT;
 postgres=# CREATE EXTENSION postgis;
@@ -111,13 +111,13 @@ postgres=# CREATE EXTENSION postgis_topology;
 postgres=# \q
 ```
 
-## Creación de una base de datos
+## Creación de una base de datos geoespacial
 Ingreso a la interfaz de psql
 ```terminal
 $ sudo -u postgres psql
 ```
 
-Creación de un usuario con capacidad de crear bases de datos con las extensiones geoespaciales
+Creación de una base de datos geoespacial, basada en el rol creado en la sección anterior
 ```terminal
 postgres=# CREATE DATABASE geobd TEMPLATE postgres OWNER gisadmin;
 postgres=# \q
