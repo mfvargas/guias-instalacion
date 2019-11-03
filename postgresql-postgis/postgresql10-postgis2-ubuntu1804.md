@@ -1,6 +1,10 @@
 # Instalación de PostgreSQL 10 y PostGIS 2 en Ubuntu 18.04
 **Última actualización**: 2 de noviembre de 2019
 
+## Documentación
+Página oficial de PostgreSQL: [PostgreSQL: The World's Most Advanced Open Source Relational Database](https://www.postgresql.org/)
+Página oficial de PostGIS: [PostGIS -- Spatial and Geographic objects for PostgreSQL](https://postgis.net/)
+
 ## Actualización del sistema
 ```terminal
 $ sudo apt update
