@@ -6,6 +6,8 @@ Página oficial de PostgreSQL: [PostgreSQL: The World's Most Advanced Open Sourc
 
 Página oficial de PostGIS: [PostGIS - Spatial and Geographic objects for PostgreSQL](https://postgis.net/)
 
+Procedimientos para la instalación de PostgreSQL y PostGIS: [install_qgis_postgis_linux](https://github.com/qgises/install_qgis_postgis_linux/blob/master/Install_QGIS_POSTGIS.sh)
+
 ## Actualización del sistema
 ```terminal
 $ sudo apt update
