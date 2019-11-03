@@ -123,3 +123,16 @@ Creaci√≥n de una base de datos geoespacial, basada en el rol creado en la secci√
 postgres=# CREATE DATABASE geobd TEMPLATE postgres OWNER gisadmin;
 postgres=# \q
 ```
+
+## Carga de datos
+Descarga de un shapefile
+```terminal
+$ wget https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_countries.zip
+$ sudo apt install -y unzip
+$ unzip ne_10m_admin_0_countries.zip
+```
+
+Carga del shapefile en la base de datos
+```terminal
+shp2pgsql -s 4326 ne_10m_admin_0_countries public.ne_10m_admin_0_countries | psql -h localhost -d geodb -U gisadmin
+```
