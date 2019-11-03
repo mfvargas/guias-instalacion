@@ -13,7 +13,6 @@ Comando apt-cache madison
 ```terminal
 $ sudo apt-cache madison postgresql postgresql-contrib postgis postgresql-10-postgis-scripts
 ```
-Salida
 ```terminal
 postgresql |     10+190 | http://mirrors.digitalocean.com/ubuntu bionic/main amd64 Packages
 postgresql-contrib |     10+190 | http://mirrors.digitalocean.com/ubuntu bionic/main amd64 Packages
@@ -31,7 +30,6 @@ $ sudo apt install -y postgresql postgresql-contrib postgis postgresql-10-postgi
 ```terminal
 $ systemctl status postgresql.service
 ```
-Salida
 ```terminal
 ● postgresql.service - PostgreSQL RDBMS
    Loaded: loaded (/lib/systemd/system/postgresql.service; enabled; vendor preset: enabled)
@@ -44,7 +42,6 @@ Salida
 ```terminal
 $ systemctl status postgresql@10-main.service
 ```
-Salida
 ```terminal
 ● postgresql@10-main.service - PostgreSQL Cluster 10-main
    Loaded: loaded (/lib/systemd/system/postgresql@.service; indirect; vendor preset: enabled)
@@ -64,7 +61,6 @@ Salida
 ```terminal
 $ systemctl is-enabled postgresql
 ```
-Salida
 ```terminal
 enabled
 ```
