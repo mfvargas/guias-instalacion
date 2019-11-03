@@ -9,7 +9,6 @@ $ sudo reboot
 ```
 
 ## Revisión de las versiones disponibles
-Comando apt-cache madison
 ```terminal
 $ sudo apt-cache madison postgresql postgresql-contrib postgis postgresql-10-postgis-scripts
 ```
@@ -66,22 +65,24 @@ enabled
 ```
 
 ## Modificación de archivos de configuración
-postgresql.conf
+Modificación de postgresql.conf
 ```terminal
 $ sudo nano /etc/postgresql/10/main/postgresql.conf
 ```
 ```terminal
-## Descomentar la línea
+# Descomentar y cambiar la línea
+listen_addresses = 'localhost'
+# Por
 listen_addresses = '*'
 # Guardar y salir
 ```
 
-pg_hba.conf
+Modificación de pg_hba.conf
 ```terminal
 $ sudo nano /etc/postgresql/10/main/pg_hba.conf
 ```
 ```terminal
-## Añadir la siguiente línea (en la sección de IPv4) para dar acceso a todos las direcciones IP
+# Añadir la siguiente línea (en la sección de IPv4) para dar acceso a todos las direcciones IP
 host     all     all        0.0.0.0/0      md5
 # Guardar y salir
 ```
