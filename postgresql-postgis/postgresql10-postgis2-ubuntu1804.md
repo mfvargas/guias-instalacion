@@ -1,4 +1,5 @@
 # Instalación de PostgreSQL 10 y PostGIS 2 en Ubuntu 18.04
+2 de noviembre de 2019
 
 ## Actualización del sistema
 ```terminal
