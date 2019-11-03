@@ -64,3 +64,29 @@ $ systemctl is-enabled postgresql
 ```terminal
 enabled
 ```
+
+## Modificación de archivos de configuración
+postgresql.conf
+```terminal
+$ sudo nano /etc/postgresql/10/main/postgresql.conf
+```
+```terminal
+## Descomentar la línea
+listen_addresses = '*'
+# Guardar y salir
+```
+
+pg_hba.conf
+```terminal
+$ sudo nano /etc/postgresql/10/main/pg_hba.conf
+```
+```terminal
+## Añadir la siguiente línea (en la sección de IPv4) para dar acceso a todos las direcciones IP
+host     all     all        0.0.0.0/0      md5
+# Guardar y salor
+```
+
+Reinicio del PostgreSQL
+```terminal
+$ sudo service postgresql restart
+```
