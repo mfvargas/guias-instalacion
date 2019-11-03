@@ -119,6 +119,6 @@ $ sudo -u postgres psql
 
 Creación de un usuario con capacidad de crear bases de datos con las extensiones geoespaciales
 ```terminal
-postgres=# CREATE DATABASE biocr20190916 TEMPLATE postgres OWNER gisadmin;
+postgres=# CREATE DATABASE geobd TEMPLATE postgres OWNER gisadmin;
 postgres=# \q
 ```
