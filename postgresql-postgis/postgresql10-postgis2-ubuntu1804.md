@@ -91,3 +91,20 @@ Reinicio del PostgreSQL
 ```terminal
 $ sudo service postgresql restart
 ```
+
+## Creación de un usuario y de extensiones de PostGIS
+Ingreso a la interfaz de psql
+```terminal
+$ sudo -u postgres psql
+```
+
+Creación de un usuario con capacidad de crear bases de datos con las extensiones geoespaciales
+```terminal
+postgres=# #Ejecute las siguientes sentencias SQL
+# Creación del usuario
+CREATE ROLE gisadmin login PASSWORD 'postgres' SUPERUSER CREATEDB CREATEROLE NOINHERIT;
+# Creación de las extensiones geoespaciales
+CREATE EXTENSION postgis;
+CREATE EXTENSION postgis_topology;
+\q
+```
