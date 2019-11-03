@@ -8,8 +8,9 @@ $ sudo reboot
 ```
 
 ## Revisión de las versiones disponibles
+Comando apt-cache madison
 ```terminal
-$ sudo apt-cache madison postgresql postgis
+$ sudo apt-cache madison postgresql postgresql-contrib postgis postgresql-10-postgis-2.5-scripts
 ```
 Salida
 ```terminal
