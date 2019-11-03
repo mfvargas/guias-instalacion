@@ -4,7 +4,7 @@
 ## Documentación
 Página oficial de PostgreSQL: [PostgreSQL: The World's Most Advanced Open Source Relational Database](https://www.postgresql.org/)
 
-Página oficial de PostGIS: [PostGIS -- Spatial and Geographic objects for PostgreSQL](https://postgis.net/)
+Página oficial de PostGIS: [PostGIS - Spatial and Geographic objects for PostgreSQL](https://postgis.net/)
 
 ## Actualización del sistema
 ```terminal
