@@ -8,6 +8,8 @@ Página oficial de PostGIS: [PostGIS - Spatial and Geographic objects for Postgr
 
 Procedimientos para la instalación de PostgreSQL y PostGIS: [install_qgis_postgis_linux](https://github.com/qgises/install_qgis_postgis_linux/blob/master/Install_QGIS_POSTGIS.sh)
 
+Guía para la instalación de PostgreSQL 12 en Ubuntu 16.04/Ubuntu 18.04 [How To Install PostgreSQL 12 on Ubuntu 18.04 / Ubuntu 16.04](https://computingforgeeks.com/install-postgresql-12-on-ubuntu/)
+
 ## Actualización del sistema
 ```terminal
 $ sudo apt update
