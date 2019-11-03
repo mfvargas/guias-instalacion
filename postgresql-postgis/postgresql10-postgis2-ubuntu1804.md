@@ -30,7 +30,7 @@ $ sudo apt update -y
 $ sudo apt install -y postgresql postgresql-contrib postgis postgresql-10-postgis-scripts
 ```
 
-## Revisión del servicio
+## Revisión del servicio postgresql
 ```terminal
 $ systemctl status postgresql.service
 ```
@@ -92,7 +92,7 @@ host    all             all             0.0.0.0/0               md5
 # Guardar y salir
 ```
 
-Reinicio del PostgreSQL
+Reinicio del servicio postgresql
 ```terminal
 $ sudo service postgresql restart
 ```
