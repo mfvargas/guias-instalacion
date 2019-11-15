@@ -112,7 +112,6 @@ $ sudo nano /etc/postgresql/12/main/pg_hba.conf
 ```terminal
 # Añadir la siguiente línea (en la sección de IPv4) para dar acceso a todas las direcciones IP
 host    all             all             0.0.0.0/0               md5
-# Guardar y salir
 ```
 
 Reinicio del servicio postgresql
