@@ -1,11 +1,11 @@
 # Instalación de PostgreSQL 12 y PostGIS 3 en Ubuntu 18.04
-**Última actualización**: 15 de noviembre de 2019
 
 ## Documentación
 * Página oficial de PostgreSQL: [PostgreSQL: The World's Most Advanced Open Source Relational Database](https://www.postgresql.org/)
 * Página oficial de PostGIS: [PostGIS - Spatial and Geographic objects for PostgreSQL](https://postgis.net/)
 * Procedimientos para la instalación de PostgreSQL y PostGIS: [install_qgis_postgis_linux](https://github.com/qgises/install_qgis_postgis_linux/blob/master/Install_QGIS_POSTGIS.sh)
 * Guía para la instalación de PostgreSQL 12 en Ubuntu 16.04/Ubuntu 18.04: [How To Install PostgreSQL 12 on Ubuntu 18.04 / Ubuntu 16.04](https://computingforgeeks.com/install-postgresql-12-on-ubuntu/)
+* Guía para la instalación de PostGIS: [UsersWikiPostGIS24UbuntuPGSQL10Apt](https://trac.osgeo.org/postgis/wiki/UsersWikiPostGIS24UbuntuPGSQL10Apt)
 
 ## Actualización del sistema
 ```terminal
@@ -14,21 +14,29 @@ $ sudo apt upgrade -y
 $ sudo reboot
 ```
 
+## Adición del repositorio de PostgreSQL 12
+Importación de la llave GPG
+```terminal
+$ wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+```
+
+Adición del repositorio
+```terminal
+$ echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" |sudo tee  /etc/apt/sources.list.d/pgdg.list
+```
+
 ## Revisión de las versiones disponibles
 ```terminal
-$ sudo apt-cache madison postgresql postgresql-contrib postgis postgresql-10-postgis-scripts
+$ sudo apt-cache madison postgresql postgresql-contrib postgis postgresql-12-postgis-scripts
 ```
 ```terminal
-postgresql |     10+190 | http://mirrors.digitalocean.com/ubuntu bionic/main amd64 Packages
-postgresql-contrib |     10+190 | http://mirrors.digitalocean.com/ubuntu bionic/main amd64 Packages
-   postgis | 2.4.3+dfsg-4 | http://mirrors.digitalocean.com/ubuntu bionic/universe amd64 Packages
-postgresql-10-postgis-scripts | 2.4.3+dfsg-4 | http://mirrors.digitalocean.com/ubuntu bionic/universe amd64 Packages
+
 ```
 
 ## Instalación
 ```terminal
 $ sudo apt update -y
-$ sudo apt install -y postgresql postgresql-contrib postgis postgresql-10-postgis-scripts
+$ sudo apt install -y postgresql postgresql-contrib postgis postgresql-12-postgis-scripts
 ```
 
 ## Revisión del servicio postgresql
