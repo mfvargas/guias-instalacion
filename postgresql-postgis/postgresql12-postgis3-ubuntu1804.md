@@ -32,7 +32,7 @@ $ sudo apt update
 
 ## Revisión de las versiones disponibles
 ```terminal
-$ sudo apt-cache madison postgresql postgresql-contrib postgis postgresql-12-postgis-scripts
+$ sudo apt-cache madison postgresql postgresql-contrib postgis postgresql-12-postgis-3-scripts
 ```
 ```terminal
 postgresql | 12+210.pgdg18.04+1 | http://apt.postgresql.org/pub/repos/apt bionic-pgdg/main amd64 Packages
@@ -45,6 +45,7 @@ postgresql-contrib | 10+190ubuntu0.1 | http://security.ubuntu.com/ubuntu bionic-
 postgresql-contrib |     10+190 | http://mirrors.digitalocean.com/ubuntu bionic/main amd64 Packages
    postgis | 3.0.0+dfsg-2~exp1.pgdg18.04+1 | http://apt.postgresql.org/pub/repos/apt bionic-pgdg/main amd64 Packages
    postgis | 2.4.3+dfsg-4 | http://mirrors.digitalocean.com/ubuntu bionic/universe amd64 Packages
+postgresql-12-postgis-3-scripts | 3.0.0+dfsg-2~exp1.pgdg18.04+1 | http://apt.postgresql.org/pub/repos/apt bionic-pgdg/main amd64 Packages
 ```
 
 ## Instalación
