@@ -135,3 +135,8 @@ Carga del shapefile en la base de datos
 ```terminal
 shp2pgsql -s 4326 ne_10m_admin_0_countries public.ne_10m_admin_0_countries | psql -h localhost -d geodb -U gisadmin
 ```
+
+## Prueba de acceso a los datos
+
+```terminal
+```
