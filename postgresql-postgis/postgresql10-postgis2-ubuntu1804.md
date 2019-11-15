@@ -137,6 +137,6 @@ shp2pgsql -s 4326 ne_10m_admin_0_countries public.ne_10m_admin_0_countries | psq
 ```
 
 ## Prueba de acceso a los datos
-
 ```terminal
+sudo -u postgres psql -d geodb -c "SELECT name FROM ne_10m_admin_0_countries;"
 ```
