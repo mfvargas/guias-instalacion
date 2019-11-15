@@ -80,7 +80,6 @@ $ sudo nano /etc/postgresql/10/main/postgresql.conf
 listen_addresses = 'localhost'
 # Por
 listen_addresses = '*'
-# Guardar y salir
 ```
 
 Modificación de pg_hba.conf
