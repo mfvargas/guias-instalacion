@@ -25,18 +25,32 @@ Adición del repositorio
 $ echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" |sudo tee  /etc/apt/sources.list.d/pgdg.list
 ```
 
+Actualización
+```terminal
+$ sudo apt update
+```
+
 ## Revisión de las versiones disponibles
 ```terminal
 $ sudo apt-cache madison postgresql postgresql-contrib postgis postgresql-12-postgis-scripts
 ```
 ```terminal
-
+postgresql | 12+210.pgdg18.04+1 | http://apt.postgresql.org/pub/repos/apt bionic-pgdg/main amd64 Packages
+postgresql | 10+190ubuntu0.1 | http://mirrors.digitalocean.com/ubuntu bionic-updates/main amd64 Packages
+postgresql | 10+190ubuntu0.1 | http://security.ubuntu.com/ubuntu bionic-security/main amd64 Packages
+postgresql |     10+190 | http://mirrors.digitalocean.com/ubuntu bionic/main amd64 Packages
+postgresql-contrib | 12+210.pgdg18.04+1 | http://apt.postgresql.org/pub/repos/apt bionic-pgdg/main amd64 Packages
+postgresql-contrib | 10+190ubuntu0.1 | http://mirrors.digitalocean.com/ubuntu bionic-updates/main amd64 Packages
+postgresql-contrib | 10+190ubuntu0.1 | http://security.ubuntu.com/ubuntu bionic-security/main amd64 Packages
+postgresql-contrib |     10+190 | http://mirrors.digitalocean.com/ubuntu bionic/main amd64 Packages
+   postgis | 3.0.0+dfsg-2~exp1.pgdg18.04+1 | http://apt.postgresql.org/pub/repos/apt bionic-pgdg/main amd64 Packages
+   postgis | 2.4.3+dfsg-4 | http://mirrors.digitalocean.com/ubuntu bionic/universe amd64 Packages
 ```
 
 ## Instalación
 ```terminal
 $ sudo apt update -y
-$ sudo apt install -y postgresql postgresql-contrib postgis postgresql-12-postgis-scripts
+$ sudo apt install -y postgresql postgresql-contrib postgis postgresql-12-postgis-3-scripts
 ```
 
 ## Revisión del servicio postgresql
@@ -46,29 +60,29 @@ $ systemctl status postgresql.service
 ```terminal
 ● postgresql.service - PostgreSQL RDBMS
    Loaded: loaded (/lib/systemd/system/postgresql.service; enabled; vendor preset: enabled)
-   Active: active (exited) since Sun 2019-11-03 03:14:32 UTC; 18min ago
- Main PID: 5306 (code=exited, status=0/SUCCESS)
+   Active: active (exited) since Fri 2019-11-15 07:28:12 UTC; 56s ago
+ Main PID: 3413 (code=exited, status=0/SUCCESS)
     Tasks: 0 (limit: 4915)
    CGroup: /system.slice/postgresql.service
 ```
 
 ```terminal
-$ systemctl status postgresql@10-main.service
+$ systemctl status postgresql@12-main.service
 ```
 ```terminal
-● postgresql@10-main.service - PostgreSQL Cluster 10-main
+● postgresql@12-main.service - PostgreSQL Cluster 12-main
    Loaded: loaded (/lib/systemd/system/postgresql@.service; indirect; vendor preset: enabled)
-   Active: active (running) since Sun 2019-11-03 03:14:37 UTC; 18min ago
- Main PID: 6511 (postgres)
+   Active: active (running) since Fri 2019-11-15 07:28:17 UTC; 1min 56s ago
+ Main PID: 4482 (postgres)
     Tasks: 7 (limit: 4915)
-   CGroup: /system.slice/system-postgresql.slice/postgresql@10-main.service
-           ├─6511 /usr/lib/postgresql/10/bin/postgres -D /var/lib/postgresql/10/main -c config_file=/etc/postgresql/10/main/postgresql.conf
-           ├─6519 postgres: 10/main: checkpointer process
-           ├─6520 postgres: 10/main: writer process
-           ├─6521 postgres: 10/main: wal writer process
-           ├─6522 postgres: 10/main: autovacuum launcher process
-           ├─6523 postgres: 10/main: stats collector process
-           └─6526 postgres: 10/main: bgworker: logical replication launcher
+   CGroup: /system.slice/system-postgresql.slice/postgresql@12-main.service
+           ├─4482 /usr/lib/postgresql/12/bin/postgres -D /var/lib/postgresql/12/main -c config_file=/etc/postgresql/12/main/postgresql.conf
+           ├─4494 postgres: 12/main: checkpointer
+           ├─4495 postgres: 12/main: background writer
+           ├─4496 postgres: 12/main: walwriter
+           ├─4498 postgres: 12/main: autovacuum launcher
+           ├─4499 postgres: 12/main: stats collector
+           └─4501 postgres: 12/main: logical replication launcher
 ```
 
 ```terminal
@@ -81,7 +95,7 @@ enabled
 ## Modificación de archivos de configuración
 Modificación de postgresql.conf
 ```terminal
-$ sudo nano /etc/postgresql/10/main/postgresql.conf
+$ sudo nano /etc/postgresql/12/main/postgresql.conf
 ```
 ```terminal
 # Descomentar y cambiar la línea
@@ -92,7 +106,7 @@ listen_addresses = '*'
 
 Modificación de pg_hba.conf
 ```terminal
-$ sudo nano /etc/postgresql/10/main/pg_hba.conf
+$ sudo nano /etc/postgresql/12/main/pg_hba.conf
 ```
 ```terminal
 # Añadir la siguiente línea (en la sección de IPv4) para dar acceso a todas las direcciones IP
