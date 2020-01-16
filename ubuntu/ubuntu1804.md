@@ -5,10 +5,11 @@
 * Rufus (para crear un USB de instalación en Windows): [Rufus](https://rufus.ie/)
 
 ## Particionamiento
+En una computadora con un disco duro de 2 TB y un SSD de 256 GB:
 En el SSD:
 * UEFI (512 MB)
 * Swap (20 MB)
-* Root (Resto del espacio disponible, \)
+* Root (Resto del espacio disponible, /)
 
 En el disco duro:
-* home (Todo el espacio disponible, \home)
+* Home (Todo el espacio disponible, /home)
