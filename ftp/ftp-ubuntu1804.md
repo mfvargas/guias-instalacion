@@ -47,3 +47,8 @@ pasv_min_port=10000
 pasv_max_port=10100
 allow_writeable_chroot=YES
 ```
+
+Reinicio del servidor:
+```terminal
+$ sudo service vsftpd restart
+```
