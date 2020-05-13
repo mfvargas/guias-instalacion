@@ -15,6 +15,16 @@ $ sudo reboot
 $ sudo apt install vsftpd
 ```
 
+## Configuración
+```terminal
+# Respaldo del archivo de configuración
+$ sudo cp /etc/vsftpd.conf  /etc/vsftpd.conf_default
+
+# Edición del archivo de configuración
+$ sudo nano /etc/vsftpd.conf
+```
+
+Contenido del archivo de configuración:
 ```
 listen=NO
 listen_ipv6=YES
