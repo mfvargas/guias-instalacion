@@ -52,3 +52,12 @@ Reinicio del servidor:
 ```terminal
 $ sudo service vsftpd restart
 ```
+
+## Creación de usuarios
+
+Por cada usuario:
+```terminal
+$ sudo useradd -m ftpuser
+$ sudo passwd ftpuser
+```
+
