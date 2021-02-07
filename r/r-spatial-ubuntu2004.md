@@ -1,4 +1,4 @@
-# Instalación de R en Ubuntu 20.04
+# Instalación de R con paquetes espaciales en Ubuntu 20.04
 
 ## Recursos
 * [How To Install R on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-install-r-on-ubuntu-20-04)
