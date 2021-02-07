@@ -23,7 +23,7 @@ $ sudo apt update
 $ sudo apt install libgdal-dev libproj-dev libgeos-dev libudunits2-dev
 
 # Instalación de paquetes espaciales de R
-$ sudo apt install r-base-dev r-cran-sf r-cran-raster
+$ sudo apt install r-cran-sf r-cran-raster
 
 # Se ejecuta con sudo para que los paquetes que se instalen estén disponibles para todos los usuarios
 $ sudo -i R
