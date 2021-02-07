@@ -19,7 +19,7 @@ $ sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
 $ sudo apt update
 
 # Instalación de GDAL, PROJ, GEOS y otras bibliotecas espaciales generales
-$ sudo apt libgdal-dev libproj-dev libgeos-dev install libudunits2-dev
+$ sudo apt libgdal-dev libproj-dev libgeos-dev libudunits2-dev
 
 # Se ejecuta con sudo para que los paquetes que se instalen estén disponibles para todos los usuarios
 $ sudo -i R
