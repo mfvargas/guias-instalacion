@@ -2,6 +2,7 @@
 
 ## Recursos
 * [How To Install R on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-install-r-on-ubuntu-20-04)
+* [Installing spatial R packages on Ubuntu](https://geocompr.github.io/post/2020/installing-r-spatial-ubuntu/)
 * [Installation of R 4.0 on Ubuntu 20.04 LTS and tips for spatial packages](https://rtask.thinkr.fr/installation-of-r-4-0-on-ubuntu-20-04-lts-and-tips-for-spatial-packages/)
 
 ## Instalación de la base de R
@@ -18,8 +19,11 @@ $ sudo apt install r-base r-base-core r-recommended r-base-dev
 $ sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
 $ sudo apt update
 
-# Instalación de GDAL, PROJ, GEOS y otras bibliotecas espaciales generales
+# Instalación de GDAL, PROJ, GEOS y otras bibliotecas espaciales generales en el sistema operativo
 $ sudo apt install libgdal-dev libproj-dev libgeos-dev libudunits2-dev
+
+# Instalación de paquetes espaciales de R
+$ sudo apt install r-base-dev r-cran-sf r-cran-raster
 
 # Se ejecuta con sudo para que los paquetes que se instalen estén disponibles para todos los usuarios
 $ sudo -i R
